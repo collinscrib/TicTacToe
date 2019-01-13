@@ -3,7 +3,7 @@ Currently works as an implementation of TicTacToe on the command line. With no c
 
 **Command line args:** 
 * `-a` : Play Player vs. AI
-* `-t` : Run unit tests on both a predetermined set, and a set with 30 random game boards.
+* `-t` : Run unit tests on both a predetermined set, and a set with 2 random game boards.
 
 ## **Usage:**
 `g++ *.cpp -o TicTacToe` in working directory, then `./TicTacToe <-a/-t>`
