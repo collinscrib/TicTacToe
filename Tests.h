@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include "Board.h"
 
-const int NUM_RANDOM_TESTS = 30;
+const int NUM_RANDOM_TESTS = 2;
 
 void runTests();
 

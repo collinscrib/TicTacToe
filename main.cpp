@@ -27,6 +27,8 @@ int main(int argc, const char* argv[]) {
     }
 
     if (testing) {
+        srand(std::chrono::duration_cast<std::chrono::milliseconds>
+              (std::chrono::system_clock::now().time_since_epoch()).count()%2000000000); // needed to seed the random generator for testing
         runTests();
     } else {
         Game* game = new Game();

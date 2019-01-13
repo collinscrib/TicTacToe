@@ -14,6 +14,8 @@ using namespace std;
 
 void runTests() {
     
+    bool passedAll = true;
+    
     int arr[10][9] = {
         
         {   1, 1, 1,
@@ -40,9 +42,9 @@ void runTests() {
             0, 0, 0,
             0, 0, 0  },
         
-        {   1, 1, 1,
+        {   2, 1, 2,
             1, 1, 1,
-            1, 1, 1  },
+            2, 1, 2  },
         
         {   2, 1, 1,
             1, 1, 2,
@@ -57,12 +59,23 @@ void runTests() {
             2, 1, 2  },
         
     };
+    bool passes[10] = {true, false, false, true, false, false, true, false, true, false};
     
-    cout << "[INFO] Running tests on predetermined test set : " << endl;
+    cout << "[INFO] Running tests on predetermined test set : " << endl << endl;
     for (int i = 0; i < 10; ++i) {
         Board t = arr[i];
         t.print();
-        cout << "Winning board? --> " << (t.checkWin() ? "TRUE" : "FALSE" ) << endl << endl;
+        cout << "[INFO] Winning board? --> " << (t.checkWin() ? "TRUE" : "FALSE" ) << endl;
+        cout << "[INFO] CERTIFY_TRUE, " << boolalpha << t.checkWin() << " is expected " << passes[i] << " -- " << (CERTIFY_TRUE(passes[i] == t.checkWin()) ? "Pass" : "Fail") << endl << endl;
+        if (passedAll == true) {
+            passedAll = CERTIFY_TRUE(passes[i] == t.checkWin());
+        }
+    }
+
+    if (passedAll) {
+        cout << "[INFO] Program Passed all predetermined tests!" << endl;
+    } else {
+        cout << "[WARNING] At least one predetermined test failed." << endl;
     }
     
     cout << endl << "[INFO] Running tests on randomly generated test set : " << endl;
@@ -75,6 +88,7 @@ void runTests() {
         t.print();
         cout << "Winning board? --> " << (t.checkWin() ? "TRUE" : "FALSE" ) << endl << endl;
     }
+    
 }
 
 /*
@@ -88,7 +102,7 @@ bool CERTIFY_TRUE(bool result) {
  * CERTIFY_FALSE returns true if the passed in value, result, is false.
  */
 bool CERTIFY_FALSE(bool result) {
-    return !result;
+    return result == false;
 }
 
 /*
