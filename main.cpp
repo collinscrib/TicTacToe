@@ -9,6 +9,7 @@
 #include <iostream>
 #include "Game.h"
 #include "Board.h"
+#include "Tests.h"
 using namespace std;
 
 int main(int argc, const char* argv[]) {
@@ -24,14 +25,17 @@ int main(int argc, const char* argv[]) {
             }
         }
     }
-    
-    Game* game = new Game();
+
     if (testing) {
-        //TODO: Add testing logic here
-    } else if (ai) {
-        game->startPvAI();
+        runTests();
     } else {
-        game->startPvP();
+        Game* game = new Game();
+        if (ai) {
+            game->startPvAI();
+        } else {
+            game->startPvP();
+        }
+        delete game;
     }
-    delete game;
+    return 0;
 }

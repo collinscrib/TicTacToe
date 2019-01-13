@@ -7,6 +7,7 @@
 //
 
 #include "Game.h"
+#include "Tests.h"
 #include <iostream>
 using namespace std;
 
@@ -73,7 +74,7 @@ void Game::printWin(int winner) {
     if (winner == O_SPACE) {
         cout << "O";
     }
-    cout << "'s Win! ";
+    cout << "'s Win! " << endl;
 }
 
 /*

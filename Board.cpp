@@ -17,6 +17,17 @@ Board::Board() {
     clearBoard();
 }
 
+/*
+ // Board(int arr[]) assigns values of arr[] to gameBoard positions by linear index
+ */
+Board::Board(int arr[]) { 
+    for (int i = 0; i < BOARD_SIZE; ++i) {
+        for (int j = 0; j < BOARD_SIZE; ++j) {
+            gameBoard[i][j] = arr[i*3 + j];
+        }
+    }
+}
+
 Board::~Board() {}
 
 /*

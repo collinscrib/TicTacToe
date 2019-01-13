@@ -6,8 +6,8 @@
 //  Copyright © 2019 Collin Scribner. All rights reserved.
 //
 
-#ifndef Game_hpp
-#define Game_hpp
+#ifndef Game_h
+#define Game_h
 
 #include <stdio.h>
 #include "Board.h"
@@ -25,6 +25,7 @@ public:
     
     void startPvP();
     void startPvAI();
+    void startTests();
     
 private:
     
@@ -33,4 +34,4 @@ private:
     
 };
 
-#endif /* Game_hpp */
+#endif /* Game_h */

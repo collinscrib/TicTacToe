@@ -6,8 +6,8 @@
 //  Copyright © 2019 Collin Scribner. All rights reserved.
 //
 
-#ifndef Board_hpp
-#define Board_hpp
+#ifndef Board_h
+#define Board_h
 
 #include <stdio.h>
 #include "TicTacToe.h"
@@ -22,6 +22,7 @@ class Board {
 public:
     
     Board();
+    Board(int arr[]); // used for making custom test sets efficiently
     ~Board();
     
     void print();
@@ -35,4 +36,4 @@ private:
 
 };
 
-#endif /* Board_hpp */
+#endif /* Board_h */
