@@ -11,4 +11,4 @@ Currently works as an implementation of TicTacToe on the command line. With no c
 ### TODO:
 * Add Player vs. AI Logic
 
-![alt text](https://i.imgur.com/NVcUjEm.png "TicTacToe UML")
+![alt text](https://i.imgur.com/kj8Z7js.png "TicTacToe UML")
