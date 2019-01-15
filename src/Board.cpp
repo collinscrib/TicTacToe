@@ -11,16 +11,22 @@
 using namespace std;
 
 /*
- // Board() initializes the board by setting every space to BLANK_SPACE upon instantiation
+ // Board() constructor; initializes the board by setting every space to BLANK_SPACE upon instantiation
  */
 Board::Board() {
     clearBoard();
 }
 
 /*
- // Board(int arr[]) assigns values of arr[] to gameBoard positions by linear index
+ // Board(int arr[]) assigns values of arr[] to gameBoard positions by linear index, useful for creating manual/predetermined gameBoards
+ // arr[] - the input array, in integers; must be of length 9
  */
-Board::Board(int arr[]) { 
+Board::Board(int arr[]) {
+    if (sizeof(*arr) != 9) {
+        cout << "[ERROR] Size of arr[] in Board Constructor is not 9" << endl;
+        exit(1); // exit the program with exit code 1
+    }
+    
     for (int i = 0; i < BOARD_SIZE; ++i) {
         for (int j = 0; j < BOARD_SIZE; ++j) {
             gameBoard[i][j] = arr[i*3 + j];
@@ -28,6 +34,9 @@ Board::Board(int arr[]) {
     }
 }
 
+/*
+ // ~Board() is the default deconstructor for the Board class, invoked upon destruction
+ */
 Board::~Board() {}
 
 /*
@@ -50,8 +59,7 @@ void Board::print() {
 }
 
 /*
- // setSquare() takes 3 parameters row, col, and val, and sets the appropriate square
- // in the 3x3 grid to either an X (1) or an O (2)
+ // setSquare() takes 3 parameters row, col, and val, and sets the appropriate square in the 3x3 grid to either an X (1) or an O (2), and returns false if the move is invalid (i.e. the space is occupied or out of bounds), otherwise true if the operation was successful.
  // row - the row of the insertion
  // col - the column of the insertion
  // val - the value of the insertion
@@ -70,7 +78,7 @@ bool Board::setSquare(int row, int col, int val) {
 }
 
 /*
- // checkWin() returns true if the current state of the board is qualified as one player winning, otherwise false
+ // checkWin() returns true if the current state of the board is qualified as one player winning, otherwise false. Does not specify who won (X's or O's)
  */
 bool Board::checkWin() {
     for (int i = 0; i < BOARD_SIZE; ++i) {

@@ -8,13 +8,15 @@
 
 #include <iostream>
 #include "Game.h"
-#include "Board.h"
 #include "Tests.h"
 using namespace std;
 
 int main(int argc, const char* argv[]) {
+    
+    // Check for command line flags
     bool ai = false;
     bool testing = false;
+    
     for (int i = 1; i < argc; ++i) {
         if (argv[i][0] == '-') {
             if (argv[i][1] == 'a') {
@@ -26,6 +28,7 @@ int main(int argc, const char* argv[]) {
         }
     }
 
+    // run program based on the state of the command line flags
     if (testing) {
         srand(std::chrono::duration_cast<std::chrono::milliseconds>
               (std::chrono::system_clock::now().time_since_epoch()).count()%2000000000); // needed to seed the random generator for testing
@@ -39,5 +42,6 @@ int main(int argc, const char* argv[]) {
         }
         delete game;
     }
+    
     return 0;
 }

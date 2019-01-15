@@ -61,7 +61,7 @@ void runTests() {
     };
     bool passes[10] = {true, false, false, true, false, false, true, false, true, false};
     
-    cout << "[INFO] Running tests on predetermined test set : " << endl << endl;
+    cout << "[INFO] Running tests on predetermined test set... " << endl << endl;
     for (int i = 0; i < 10; ++i) {
         Board t = arr[i];
         t.print();
@@ -78,7 +78,7 @@ void runTests() {
         cout << "[WARNING] At least one predetermined test failed." << endl;
     }
     
-    cout << endl << "[INFO] Running tests on randomly generated test set : " << endl;
+    cout << endl << "[INFO] Running tests on randomly generated test set..." << endl;
     int rand_arr[9];
     for (int i = 0; i < NUM_RANDOM_TESTS; ++i) {
         for (int j = 0; j < 9; ++j) {
@@ -87,6 +87,14 @@ void runTests() {
         Board t = rand_arr;
         t.print();
         cout << "Winning board? --> " << (t.checkWin() ? "TRUE" : "FALSE" ) << endl << endl;
+    }
+    
+    cout << "[INFO] Running tests on Board class..." << endl;
+    for (int i = 1; i <= 2; ++i) {
+        Board* t = new Board();
+        cout << "[INFO] Test " << i << " - set square " << rand() % 3 << " " << rand() % 3 << " to " << (i == 1 ? "X" : "O") << " - " << (t->setSquare(i, i, i) ? "Passed" : "FAIL" ) << endl;
+        delete t;
+        t = nullptr;
     }
     
 }

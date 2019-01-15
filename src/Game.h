@@ -15,9 +15,6 @@
 using namespace std;
 
 class Game {
-    
-    int turn;
-    
 public:
     
     Game();

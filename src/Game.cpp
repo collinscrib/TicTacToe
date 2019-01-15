@@ -6,16 +6,19 @@
 //  Copyright © 2019 Collin Scribner. All rights reserved.
 //
 
+#include <iostream>
 #include "Game.h"
 #include "Tests.h"
-#include <iostream>
 using namespace std;
 
 /*
  // Game() initializes everything needed for a TicTacToe game to begin upon instantiation
  */
-Game::Game() : turn(0) {}
+Game::Game() {}
 
+/*
+ // ~Game() is the general deconstructor for the Game object, invoked upon destruction
+ */
 Game::~Game() {}
 
 /*
@@ -66,6 +69,7 @@ void Game::startPvAI() {
 
 /*
  // printWin() outputs the win message
+ // winner - The enum value of whichever player one, for printing purposes
  */
 void Game::printWin(int winner) {
     if (winner == X_SPACE) {
