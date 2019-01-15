@@ -1,5 +1,5 @@
 # TicTacToe in C++   
-Currently works as an implementation of TicTacToe on the command line. With no command line flags, it plays Player vs. Player TicTacToe with X's starting first.
+Currently works as an implementation of TicTacToe on the command line. With no command line flags, it plays Player vs. Player TicTacToe with a random starting player (X's or O's).
 
 **Command line args:** 
 * `-a` : Play Player vs. AI
