@@ -135,12 +135,14 @@ void Game::startPvAI() {
         if (board->checkWin()) {
             printWin(player);
             delete board;
+            board = nullptr;
             return;
         }
     }
     
     printNoWin();
     delete board;
+    board = nullptr;
 }
 
 /*
