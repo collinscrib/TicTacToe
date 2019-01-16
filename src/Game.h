@@ -15,6 +15,9 @@
 using namespace std;
 
 class Game {
+    
+    int firstPlayerConst;
+    
 public:
     
     Game();
