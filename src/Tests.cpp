@@ -61,12 +61,12 @@ void runTests() {
     };
     bool passes[10] = {true, false, false, true, false, false, true, false, true, false};
     
-    cout << "[INFO] Running tests on predetermined test set... " << endl << endl;
+    cout << "[INFO] Running tests on predetermined test set... " << endl;
     for (int i = 0; i < 10; ++i) {
         Board t = arr[i];
         t.print();
-        cout << "[INFO] Winning board? --> " << (t.checkWin() ? "TRUE" : "FALSE" ) << endl;
-        cout << "[INFO] CERTIFY_TRUE, " << boolalpha << t.checkWin() << " is expected " << passes[i] << " -- " << (CERTIFY_TRUE(passes[i] == t.checkWin()) ? "Pass" : "Fail") << endl << endl;
+        cout << "[TEST] Winning board? --> " << (t.checkWin() ? "TRUE" : "FALSE" ) << endl;
+        cout << "[TEST] CERTIFY_TRUE, " << boolalpha << t.checkWin() << " is expected " << passes[i] << " -- " << (CERTIFY_TRUE(passes[i] == t.checkWin()) ? "Pass" : "Fail") << endl;
         if (passedAll == true) {
             passedAll = CERTIFY_TRUE(passes[i] == t.checkWin());
         }
@@ -78,7 +78,7 @@ void runTests() {
         cout << "[WARNING] At least one predetermined test failed." << endl;
     }
     
-    cout << endl << "[INFO] Running tests on randomly generated test set..." << endl;
+    cout << "[INFO] Running tests on randomly generated test set..." << endl;
     int rand_arr[9];
     for (int i = 0; i < NUM_RANDOM_TESTS; ++i) {
         for (int j = 0; j < 9; ++j) {
@@ -86,7 +86,7 @@ void runTests() {
         }
         Board t = rand_arr;
         t.print();
-        cout << "Winning board? --> " << (t.checkWin() ? "TRUE" : "FALSE" ) << endl << endl;
+        cout << "[TEST] Winning board? --> " << (t.checkWin() ? "TRUE" : "FALSE" ) << endl;
     }
     
     cout << "[INFO] Running tests on Board class..." << endl;

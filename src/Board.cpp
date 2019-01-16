@@ -14,7 +14,7 @@ using namespace std;
  // Board() constructor; initializes the board by setting every space to BLANK_SPACE upon instantiation
  */
 Board::Board() {
-    clearBoard();
+    clear();
 }
 
 /*
@@ -22,10 +22,16 @@ Board::Board() {
  // arr[] - the input array, in integers; must be of length 9
  */
 Board::Board(int arr[]) {
-    if (sizeof(*arr) != 9) {
-        cout << "[ERROR] Size of arr[] in Board Constructor is not 9" << endl;
-        exit(1); // exit the program with exit code 1
-    }
+//    int size = 0;
+//    for (int i = 0; i < 9; ++i) {
+//        if (isalnum(arr[i])) {
+//            size++;
+//        }
+//    }
+//    if (size != 9) {
+//        cout << "[ERROR] Size of arr[] in Board Constructor is not 9" << endl;
+//        exit(1); // exit the program with exit code 1
+//    }
     
     for (int i = 0; i < BOARD_SIZE; ++i) {
         for (int j = 0; j < BOARD_SIZE; ++j) {
@@ -101,7 +107,7 @@ bool Board::checkWin() {
 /*
  // clearBoard() changes every spot in the board in memory to BLANK_SPACE
  */
-void Board::clearBoard() {
+void Board::clear() {
     for (int i = 0; i < 3; ++i) {
         for (int j = 0; j < 3; ++j) {
             gameBoard[i][j] = BLANK_SPACE;

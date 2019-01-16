@@ -16,7 +16,7 @@ using namespace std;
 
 class Game {
     
-    int firstPlayerConst;
+    Board* board;
     
 public:
     

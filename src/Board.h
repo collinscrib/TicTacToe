@@ -30,9 +30,7 @@ public:
     bool setSquare(int row, int col, int val);
     bool checkWin();
     
-private:
-    
-    void clearBoard();
+    void clear();
 
 };
 
