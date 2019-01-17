@@ -1,5 +1,5 @@
 # TicTacToe in C++   
-Currently works as an implementation of TicTacToe on the command line. With no command line flags, it plays Player vs. Player TicTacToe with a random starting player (X's or O's).
+Currently works as an implementation of TicTacToe on the command line. With no command line flags, it plays Player vs. Player TicTacToe with a random starting player (X's or O's). By using command line flags, Player vs Computer can be played and unit tests can be ran on the program. The AI is very dumb, and just guesses randomly for where to play.
 
 **Command line args:** 
 * `-a` : Play Player vs. AI
@@ -7,8 +7,5 @@ Currently works as an implementation of TicTacToe on the command line. With no c
 
 ## **Usage:**
 `g++ *.cpp -o TicTacToe` in working directory, then `./TicTacToe <-a/-t>`
-
-### TODO:
-* Add Player vs. AI Logic
 
 ![alt text](https://i.imgur.com/kj8Z7js.png "TicTacToe UML")
