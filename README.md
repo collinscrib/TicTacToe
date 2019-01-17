@@ -8,4 +8,5 @@ Currently works as an implementation of TicTacToe on the command line. With no c
 ## **Usage:**
 `g++ *.cpp -o TicTacToe` in working directory, then `./TicTacToe <-a/-t>`
 
-![alt text](https://i.imgur.com/kj8Z7js.png "TicTacToe UML")
+![alt text](https://i.imgur.com/ERAzjfm.png "TicTacToe UML")
+
