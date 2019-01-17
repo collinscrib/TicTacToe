@@ -106,10 +106,10 @@ void Game::startPvAI() {
         computer = X_SPACE;
     }
     
-    int r = 0, c = 0;
-    for (int i = 1; i <= 9; ++i) {
+    int r = 0, c = 0, startingConst = player - 1;
+    for (int i = 1 + startingConst; i <= 9 + startingConst; ++i) {
         if (i > 2) {
-            player = i % 2;
+            player = (i % 2 == 0 ? O_SPACE : X_SPACE); // even numbers are O's, odd numbers are X's
         } else {
             player = i;
         }
