@@ -25,11 +25,12 @@ public:
     Board(int arr[]); // used for making custom test sets efficiently
     ~Board();
     
-    void print();
+    int getSquare(int row, int col);
     
     bool setSquare(int row, int col, int val);
     bool checkWin();
     
+    void print();
     void clear();
 
 };

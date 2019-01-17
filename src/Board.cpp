@@ -22,17 +22,6 @@ Board::Board() {
  // arr[] - the input array, in integers; must be of length 9
  */
 Board::Board(int arr[]) {
-//    int size = 0;
-//    for (int i = 0; i < 9; ++i) {
-//        if (isalnum(arr[i])) {
-//            size++;
-//        }
-//    }
-//    if (size != 9) {
-//        cout << "[ERROR] Size of arr[] in Board Constructor is not 9" << endl;
-//        exit(1); // exit the program with exit code 1
-//    }
-    
     for (int i = 0; i < BOARD_SIZE; ++i) {
         for (int j = 0; j < BOARD_SIZE; ++j) {
             gameBoard[i][j] = arr[i*3 + j];
@@ -46,22 +35,12 @@ Board::Board(int arr[]) {
 Board::~Board() {}
 
 /*
- // print() outputs the game board in a readable text format (3x3) to the console
+ // getSquare() takes 2 parameters and returns the value of the gameBoard space at the spot row, col
+ // row - the row of the retrieval
+ // col - the column of the retrieval
  */
-void Board::print() {
-    for (int i = 0; i < BOARD_SIZE; ++i) {
-        cout << "| ";
-        for (int j = 0; j < BOARD_SIZE; ++j) {
-            string space = " ";
-            if (gameBoard[i][j] == X_SPACE) {
-                space = "X";
-            } else if (gameBoard[i][j] == O_SPACE) {
-                space = "O";
-            }
-            cout << space << " | ";
-        }
-        cout << endl;
-    }
+int Board::getSquare(int row, int col) {
+    return gameBoard[row][col];
 }
 
 /*
@@ -102,6 +81,25 @@ bool Board::checkWin() {
         return true;
     }
     return false;
+}
+
+/*
+ // print() outputs the game board in a readable text format (3x3) to the console
+ */
+void Board::print() {
+    for (int i = 0; i < BOARD_SIZE; ++i) {
+        cout << "| ";
+        for (int j = 0; j < BOARD_SIZE; ++j) {
+            string space = " ";
+            if (gameBoard[i][j] == X_SPACE) {
+                space = "X";
+            } else if (gameBoard[i][j] == O_SPACE) {
+                space = "O";
+            }
+            cout << space << " | ";
+        }
+        cout << endl;
+    }
 }
 
 /*

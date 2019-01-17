@@ -12,6 +12,9 @@
 
 using namespace std;
 
+/*
+ * runTests() creates a number of Board classes and runs unit tests on them to verify that they work properly. This can be viewed/run from the console by using the command line argument flag '-t'
+ */
 void runTests() {
     
     bool passedAll = true;
