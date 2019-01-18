@@ -10,7 +10,10 @@
 #define Game_h
 
 #include <stdio.h>
+#include <iostream>
+#include <string>
 #include "Board.h"
+#include "Tests.h"
 #include "TicTacToe.h"
 using namespace std;
 

@@ -6,11 +6,7 @@
 //  Copyright © 2019 Collin Scribner. All rights reserved.
 //
 
-#include <iostream>
-#include <math.h>
-#include <string>
 #include "Game.h"
-#include "Tests.h"
 using namespace std;
 
 /*

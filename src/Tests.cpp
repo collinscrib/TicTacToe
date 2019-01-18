@@ -6,9 +6,7 @@
 //  Copyright © 2019 Collin Scribner. All rights reserved.
 //
 
-#include <iostream>
 #include "Tests.h"
-#include "Board.h"
 
 using namespace std;
 

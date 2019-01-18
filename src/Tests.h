@@ -10,6 +10,7 @@
 #define Tests_h
 
 #include <stdio.h>
+#include <iostream>
 #include "Board.h"
 
 const int NUM_RANDOM_TESTS = 2;
