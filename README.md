@@ -10,5 +10,5 @@ Currently works as an implementation of TicTacToe on the command line. With no c
 
 ## **UML Diagram:**
 
-![alt text](https://i.imgur.com/ERAzjfm.png "TicTacToe UML")
+![alt text](https://i.imgur.com/9ekIKOD.png "TicTacToe UML")
 
