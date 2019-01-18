@@ -18,8 +18,9 @@ using namespace std;
 void runTests() {
     
     bool passedAll = true;
+    bool passes[10] = {true, false, false, true, false, false, true, false, true, false};
     
-    int arr[10][9] = {
+    int arr[10][9] = { // 10 predetermined tests, with 9 (3x3) squares each
         
         {   1, 1, 1,
             0, 2, 0,
@@ -62,7 +63,6 @@ void runTests() {
             2, 1, 2  },
         
     };
-    bool passes[10] = {true, false, false, true, false, false, true, false, true, false};
     
     cout << "[INFO] Running tests on predetermined test set... " << endl;
     for (int i = 0; i < 10; ++i) {
